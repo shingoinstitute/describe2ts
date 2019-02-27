@@ -32,11 +32,11 @@ for (const desc of describes) {
 
 ### describe2ts
 
-| Parameter       | Type                                                                                               | Description                                                                                     | Required |
-| --------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------- |
-| desc            | `DescribeSObjectResult`                                                                            | a DescribeSObjectResult object                                                                  | ✓        |
-| resolver        | `string => Option<string> | string | null | undefined`                                             | a function that resolves the name of a Salesforce Object to a typescript type string            | ✓        |
-| sobjectResolver | `undefined | (string => Option<DescribeSObjectResult> | DescribeSObjectResult | null | undefined)` | an optional function that resolves the name of a Salesforce Object to its DescribeSObjectResult | ✗        |
-| newtype         | `undefined | boolean`                                                                              | use newtypes instead of typescript primitives                                                   | ✗        |
-| sfTypeResolver  | `undefined | { readonly [k in FieldType]: (f: Field, newtype?: boolean) => string }`               | a map of functions from salesforce types to typescript types                                    | ✗        |
-| defaultExport   | `undefined | boolean`                                                                              | add a default export line to the output text                                                    | ✗        |
+| Parameter       | Type                                                                                                   | Description                                                                                     | Required |
+| --------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | -------- |
+| desc            | `DescribeSObjectResult`                                                                                | a DescribeSObjectResult object                                                                  | ✓        |
+| resolver        | `string => Option<string> \| string \| null \| undefined`                                              | a function that resolves the name of a Salesforce Object to a typescript type string            | ✓        |
+| sobjectResolver | `undefined \| (string => Option<DescribeSObjectResult> \| DescribeSObjectResult \| null \| undefined)` | an optional function that resolves the name of a Salesforce Object to its DescribeSObjectResult | ✗        |
+| newtype         | `undefined \| boolean`                                                                                 | use newtypes instead of typescript primitives                                                   | ✗        |
+| sfTypeResolver  | `undefined \| { readonly [k in FieldType]: (f: Field, newtype?: boolean) => string }`                  | a map of functions from salesforce types to typescript types                                    | ✗        |
+| defaultExport   | `undefined \| boolean`                                                                                 | add a default export line to the output text                                                    | ✗        |
