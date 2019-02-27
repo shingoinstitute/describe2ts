@@ -1,0 +1,62 @@
+{
+  "name": "describe2ts",
+  "version": "0.1.0",
+  "description": "Converts salesforce DescribeSObject results to typescript interfaces",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "run-s test:*",
+    "test:lint": "tslint --project . && prettier \"src/**/*.ts\" --list-different",
+    "test:unit": "jest",
+    "test:unit:watch": "jest --watch",
+    "test:security": "npm audit",
+    "cov": "run-s cov:html && open coverage/index.html",
+    "cov:html": "jest --coverage --coverageReporters='html'",
+    "cov:send": "jest --coverage --coverageReporters='lcov'; codecov",
+    "cov:check": "jest --coverage",
+    "clean": "rm -r build coverage",
+    "prepack": "npm run build && cp -Rav build/* . | ./scripts/parseEmitted.sh build.emit",
+    "postpack": "./scripts/postpack.sh"
+  },
+  "keywords": [
+    "Salesforce",
+    "Typescript",
+    "DescribeSObject"
+  ],
+  "author": "Abraham White <abelincoln.white@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@shingo/tslint-rules": "^1.1.0",
+    "@types/jest": "^24.0.7",
+    "@types/node": "^10.12.21",
+    "@types/valid-url": "^1.0.2",
+    "fast-check": "^1.10.1",
+    "jest": "^24.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.3.3",
+    "typescript-tslint-plugin": "^0.3.1"
+  },
+  "dependencies": {
+    "@types/jsforce": "^1.9.4",
+    "fp-ts": "^1.13.0",
+    "isemail": "^3.2.0",
+    "newtype-ts": "^0.2.4",
+    "valid-url": "^1.0.9"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  }
+}

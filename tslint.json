@@ -1,0 +1,11 @@
+{
+  "extends": ["@shingo/tslint-rules", "tslint-config-prettier"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": { "severity": "warn" },
+    "no-submodule-imports": false
+  },
+  "linterOptions": {
+    "exclude": ["node_modules"]
+  }
+}
