@@ -23,9 +23,10 @@ const resolvefn = <T>(
  * Converts a Salesforce describe result into a typescript type
  * @param desc a DescribeSObjectResult object
  * @param resolver a function that resolves the name of a Salesforce Object to a typescript type
- * @param sobjectResolver a function that resolves the name of a Salesforce Object to its DescribeSObjectResult
+ * @param sobjectResolver an optional function that resolves the name of a Salesforce Object to its DescribeSObjectResult
  * @param newtype use newtypes?
  * @param sfTypeResolver a map of functions from salesforce types to typescript types
+ * @param defaultExport add a default export line to the output text
  * @returns a typescript interface type as a string
  */
 export const describe2ts = (
