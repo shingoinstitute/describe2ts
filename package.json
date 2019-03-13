@@ -1,5 +1,5 @@
 {
-  "name": "describe2ts",
+  "name": "@shingo/describe2ts",
   "version": "0.1.0",
   "description": "Converts salesforce DescribeSObject results to typescript interfaces",
   "main": "index.js",

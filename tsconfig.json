@@ -6,7 +6,6 @@
     "outDir": "build",
     "rootDir": "src",
     "strict": true,
-    "baseUrl": "./",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "plugins": [
@@ -17,5 +16,6 @@
         "ignoreDefinitionFiles": true
       }
     ]
-  }
+  },
+  "include": ["src/**/*.ts"]
 }
