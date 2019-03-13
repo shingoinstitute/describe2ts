@@ -1,6 +1,6 @@
 {
   "name": "@shingo/describe2ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Converts salesforce DescribeSObject results to typescript interfaces",
   "main": "index.js",
   "types": "index.d.ts",
@@ -18,6 +18,10 @@
     "clean": "rm -r build coverage",
     "prepack": "npm run build && cp -Rav build/* . | ./scripts/parseEmitted.sh build.emit",
     "postpack": "./scripts/postpack.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shingoinstitute/describe2ts.git"
   },
   "keywords": [
     "Salesforce",
